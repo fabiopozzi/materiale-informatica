@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Introduzione al corso</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/solarized.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2>Argomenti di informatica classe 4°</h2>
+				</section>
+				<section>
+					<h2>ALLOCAZIONE DINAMICA DELLA MEMORIA</h2>
+				</section>
+				<section>
+					<ul>
+						<li>Puntatori</li>
+						<ul>
+							<li class="fragment">Cosa sono?</li>
+							<li class="fragment">Perchè li usiamo?</li>
+						</ul>
+						<li class="fragment">Passaggio parametri per riferimento</li>
+						<li class="fragment">malloc() e le altre funzioni in C</li>
+						<li class="fragment">Accesso a strutture dati tramite puntatori</li>
+					</ul>
+				</section>
+				<section>
+					<h2>STRUTTURE DATI</h2>
+				</section>
+				<section>
+					<ul>
+						<li>Liste collegate</li>
+						<li class="fragment">Pile</li>
+						<li class="fragment">Code</li>
+						<li class="fragment">Grafi (struttura, algoritmi di visita, modifica)</li>
+					</ul>
+				</section>
+				<section>
+					<h2>FILE</h2>
+				</section>
+				<section>
+					<ul>
+						<li>Operazioni di base</li>
+						<ul>
+							<li class="fragment">Apertura</li>
+							<li class="fragment">Chiusura</li>
+						</ul>
+						<li class="fragment">Operazioni su file di testo
+							<ul>
+								<li class="fragment">Lettura file di testo</li>
+								<li class="fragment">Scrittura file di testo</li>
+							</ul>
+						</li>
+						<li class="fragment">Operazioni su file binari:
+							<ul>
+								<li class="fragment">Spostamenti</li>
+								<li class="fragment">Accesso diretto</li>
+								<li class="fragment">Lettura di strutture dati</li>
+								<li class="fragment">Scrittura di strutture dati</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h2>PROGRAMMAZIONE AD OGGETTI</h2>
+				</section>
+				<section>
+					<h3>Principi di base e storia della OOP</h3>
+					<ul>
+						<li class="fragment">Concetti di base</li>
+						<li class="fragment">Classi</li>
+						<li class="fragment">Metodi, Attributi</li>
+						<li class="fragment">Incapsulamento, Visibilità</li>
+						<ul>
+							<li class="fragment">Costruttori / distruttori</li>
+							<li class="fragment">Interfacce</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Concetti più avanzati</h3>
+							<p class="fragment">Ereditarietà</p>
+							<p class="fragment">Polimorfismo</p>
+							<p class="fragment">Applicazioni di questi principi</p>
+							<ul>
+								<li class="fragment">Overloading</li>
+								<li class="fragment">Overriding</li>
+							</ul>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
