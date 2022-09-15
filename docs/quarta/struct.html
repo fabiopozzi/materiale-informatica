@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Introduzione al corso</title>
+
+		<link rel="stylesheet" href=../dist/reset.css">
+		<link rel="stylesheet" href="../dist/reveal.css">
+		<link rel="stylesheet" href="../dist/theme/solarized.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="../plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2>Tipo Struct</h2>
+				</section>
+				<section>
+					<ul>
+						<li>Raggruppamento di variabili di tipo diverso</li>
+						<li class="fragment">Le parti che compongono una struct sono dette anche <b>membri</b></li>
+						<li class="fragment">sono identificate da un nome (<b>tag</b>)</li>
+						<li class="fragment">In memoria i membri sono adiacenti</li>
+						<li class="fragment">e in ordine di dichiarazione</li>
+					</ul>
+				</section>
+				<section>
+					<h2>struct padding</h2>
+					<ul>
+						<li>Tra un membro e il successivo ci possono però esser dei "buchi" (<i>padding</i>)</li>
+						<li class="fragment">spazi intermedi aggiunti per allineare la memoria</li>
+						<li class="fragment">Quanti byte vengono introdotti dipende dall'architettura</li>
+						<li class="fragment">Il padding non viene mai inserito <i>prima</i> del primo membro.</li>
+						<li class="fragment">quindi l'indirizzo della struct coincide con quello del primo membro</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Struct Padding</h2>
+					<img src="../media/struct1.png">
+					<p>In questo caso aggiungo del padding per allineare il long ad un multiplo di 32bit</p>
+				</section>
+				<section>
+					<h2>Struct: dichiarazione</h2>
+					<pre>
+						<code data-trim data-noescape>
+							struct nome_tag
+							{
+								tipo1 nome_membro1;
+								tipo2 nome_membro2;
+								...
+							};
+						</code>
+					</pre>
+					<p class="piccolo">La dichiarazione non riserva memoria, ma crea un nuovo tipo di dato</p>
+					<p class="piccolo">Esempio:</p>
+					<pre>
+						<code data-trim data-noescape>
+							struct punto
+							{
+								int x;
+								int y;
+								int z;
+							};
+						</code>
+					</pre>
+				</section>
+			</div>
+		</div>
+
+		<script src="../dist/reveal.js"></script>
+		<script src="../plugin/notes/notes.js"></script>
+		<script src="../plugin/markdown/markdown.js"></script>
+		<script src="../plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+		<style>
+			.piccolo {
+				font-size: 0.7em !important;
+			}
+		</style>
+	</body>
+</html>
